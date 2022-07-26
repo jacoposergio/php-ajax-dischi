@@ -20,7 +20,7 @@
   <main>
       <div class="main-wrapper">
           <div class="container-fluid">
-              <div class="row gx-5 row-cols-md-5 row-cols-sm-3 ">
+              <div class="row gx-5 row-cols-md-3">
                   <?php foreach($database as $disc){ ?> 
                   <div class="col">
                     <div class="ms_card">
