@@ -1,3 +1,5 @@
+<?php require __DIR__ . '/database.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,16 +20,18 @@
   <main>
       <div class="main-wrapper">
           <div class="container-fluid">
-              <div class="row row-cols-md-5 row-cols-sm-3  ">
+              <div class="row gx-5 row-cols-md-5 row-cols-sm-3 ">
+                  <?php foreach($database as $disc){ ?> 
                   <div class="col">
-                  <div class="ms_card">
-                    <div class="song-img">
-                        <img src="info.poster" alt="">
+                    <div class="ms_card">
+                        <div class="song-img">
+                        <img src="<?php echo $disc['poster'] ?>" alt="poster <?php echo $disc['title'] ?> ">
+                        </div>
+                        <h3><?php echo $disc['title'] ?></h3>
+                        <h4><?php echo $disc['author'] ?></h4>
+                        <h5><?php echo $disc['year'] ?></h5>
                     </div>
-                    <h3>title</h3>
-                    <h4>author</h4>
-                    <h5>info year</h5>
-                </div>
+                 <?php } ?>
                 </div> 
             </div>
         </div>
